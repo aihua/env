@@ -16,7 +16,3 @@ if [ -d /etc/profile.d ]; then
   done
   unset i
 fi
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
-fi
