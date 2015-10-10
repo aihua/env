@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo kextload –b com.intel.kext.intelhaxm
+sudo kextload -b com.intel.kext.intelhaxm
