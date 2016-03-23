@@ -22,11 +22,15 @@ server {
 	listen [::]:80 default_server ipv6only=on;
 
 	#root /usr/share/nginx/html;
+	#index index.html index.htm;
 	root /data/web;
 	index index.html index.htm index.php;
 
 	# Make site accessible from http://localhost/
-	server_name localhost;
+	server_name api0002.uzuer.com;
+	client_max_body_size 50M;
+	client_body_buffer_size 128k;
+	client_body_temp_path	/var/nginx/client_body_temp;
 
 	location / {
 		# First attempt to serve request as file, then
@@ -57,11 +61,15 @@ server {
 	#	# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
 	#
 	#	# With php5-cgi alone:
-	#	fastcgi_pass 127.0.0.1:9000;
+		#fastcgi_pass 127.0.0.1:9000;
 	#	# With php5-fpm:
+	#	fastcgi_pass unix:/var/run/php5-fpm.sock;
+	#	fastcgi_index index.php;
+	#	include fastcgi_params;
 		fastcgi_pass unix:/var/run/php5-fpm.sock;
 		fastcgi_index index.php;
-		include fastcgi_params;
+		#include fastcgi_params;
+		include /etc/nginx/fastcgi_params;
 	}
 
 	# deny access to .htaccess files, if Apache's document root
@@ -70,6 +78,22 @@ server {
 	#location ~ /\.ht {
 	#	deny all;
 	#}
+	location /rental/v2 {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Host $http_host;
+		proxy_set_header X-Forwarded-Proto http;
+		proxy_redirect off;
+		proxy_buffers           32 4k;
+		proxy_buffer_size          4k;
+		proxy_busy_buffers_size    64k;
+		proxy_temp_file_write_size 64k;
+		proxy_temp_path            /var/nginx/proxy_temp;
+
+		proxy_connect_timeout      70;
+		proxy_send_timeout         120;
+		proxy_read_timeout         120;
+		proxy_pass http://tomcat_server;
+	}
 }
 
 
@@ -90,6 +114,27 @@ server {
 
 # HTTPS server
 #
+#server {
+#	listen 443;
+#	server_name localhost;
+#
+#	root html;
+#	index index.html index.htm;
+#
+#	ssl on;
+#	ssl_certificate cert.pem;
+#	ssl_certificate_key cert.key;
+#
+#	ssl_session_timeout 5m;
+#
+#	ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+#	ssl_ciphers "HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES";
+#	ssl_prefer_server_ciphers on;
+#
+#	location / {
+#		try_files $uri $uri/ =404;
+#	}
+#}
 server {
 	listen 443;
 	server_name localhost;
@@ -98,6 +143,7 @@ server {
 #	index index.html index.htm;
 	root /data/web;
 	index index.html index.htm index.php;
+	client_max_body_size 50M;
 #
 	ssl on;
 	ssl_certificate /etc/nginx/ssl/cert.pem;
@@ -114,15 +160,20 @@ server {
 		try_files $uri $uri/ =404;
 	}
 
-	location /hello {
+	location /rental/v2 {
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header Host $http_host;
 		proxy_set_header X-Forwarded-Proto https;
 		proxy_redirect off;
-		proxy_connect_timeout      240;
-		proxy_send_timeout         240;
-		proxy_read_timeout         240;
-		# note, there is not SSL here! plain HTTP is used
-		proxy_pass http://127.0.0.1:8080;
+		proxy_buffers           32 4k;
+		proxy_buffer_size          4k;
+		proxy_busy_buffers_size    64k;
+		proxy_temp_file_write_size 64k;
+		proxy_temp_path            /var/nginx/proxy_temp;
+
+		proxy_connect_timeout      70;
+		proxy_send_timeout         120;
+		proxy_read_timeout         120;
+		proxy_pass http://tomcat_server;
 	}
 }
