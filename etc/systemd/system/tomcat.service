@@ -1,0 +1,25 @@
+[Unit]
+Description=Tomcat Servlet Container
+After=network.target
+
+
+[Service]
+Type=forking
+PIDFile=/var/run/tomcat/tomcat.pid
+User=tomcat
+Group=www-data
+EnvironmentFile=/etc/default/tomcat
+ExecStart=/opt/tomcat/8.5.4/bin/catalina.sh start
+ExecStop=/opt/tomcat/8.5.4/bin/catalina.sh stop
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=tomcat
+RuntimeDirectoryMode=755
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+Alias=tomcat.service

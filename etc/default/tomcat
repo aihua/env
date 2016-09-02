@@ -1,0 +1,7 @@
+JAVA_HOME=/opt/jse/1.8.0_102
+CATALINA_HOME=/opt/tomcat/8.5.4
+JENKINS_HOME=/opt/tomcat/8.5.4/webapps/jenkins
+ARTIFACTORY_HOME=/opt/artifactory/4.11.1
+JAVA_OPTS="-server -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Dfile.encoding=UTF-8"
+CATALINA_OPTS="-Djava.net.preferIPv4Stack=true -Xms1024m -Xmx4096m -Xss256k -XX:SurvivorRatio=2 -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+HeapDumpOnOutOfMemoryError"
+CATALINA_PID=/var/run/tomcat/tomcat.pid
