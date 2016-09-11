@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${GRADLE_HOME}" ] ; then
-	gradle_version="2.13"
+	gradle_version="3.0"
 	gradle_path="/opt/gradle/${gradle_version}"
 
 	if [ -x "${gradle_path}/bin/gradle" ] ; then

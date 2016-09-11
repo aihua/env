@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${NODE_JS_HOME}" ] ; then
-	node_js_version="0.12.7"
+	node_js_version="4.5.0"
 	node_js_path="/opt/node.js/${node_js_version}"
 
 	if [ -x "${node_js_path}/bin/node" ] ; then
