@@ -3,5 +3,6 @@
 user=""
 password=""
 database=""
+source="xxx.sql"
 
-mysql --user=${user} --password=${password} ${database}  < ${database}.sql > ${database}.log 2>&1
+mysql --user="${user}" --password="${password}" "${database}"  < ${source} > ${database}.log 2>&1
