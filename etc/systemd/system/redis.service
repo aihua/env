@@ -1,0 +1,23 @@
+[Unit]
+Description=Redis - Advanced key-value store
+After=network.target
+
+[Service]
+Type=notify
+User=redis
+Group=redis
+ExecStart=/opt/redis/3.2.9/bin/redis-server /etc/redis/6379.conf
+ExecStop=/opt/redis/3.2.9/bin/redis-cli -p 6379 shutdown
+Restart=always
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=redis
+RuntimeDirectoryMode=755
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

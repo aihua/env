@@ -1,0 +1,27 @@
+#####################################################
+#
+# GitLab version    : 5.x - 7.x
+# Contributors      : davispuh, mtorromeo, axilleas, boeserwolf91, Stefan Tatschner (rumpelsepp)
+# Downloaded from   : https://gitlab.com/gitlab-org/gitlab-recipes/tree/master/init/systemd
+#
+####################################################
+
+[Unit]
+Description=GitLab Sidekiq Worker
+Requires=redis.service
+Wants=mysql.service 
+After=redis.service mysql.service 
+
+[Service]
+Type=forking
+User=git
+WorkingDirectory=/home/git/gitlab
+Environment=RAILS_ENV=production
+SyslogIdentifier=gitlab-sidekiq
+PIDFile=/home/git/gitlab/tmp/pids/sidekiq.pid
+
+ExecStart=/usr/local/bin/bundle exec "sidekiq -C config/sidekiq_queues.yml -c 5 -e production -P tmp/pids/sidekiq.pid -d -L log/sidekiq.log >> log/sidekiq.log 2>&1"
+ExecStop=/usr/local/bin/bundle exec "sidekiqctl stop /home/git/gitlab/tmp/pids/sidekiq.pid >> /home/git/gitlab/log/sidekiq.log 2>&1"
+
+[Install]
+WantedBy=multi-user.target
