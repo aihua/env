@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${HIVE_HOME}" ] ; then
-	hive_version="2.1.0"
+	hive_version="2.1.1"
 	hive_path="/opt/hive/${hive_version}"
 
 	if [ -x "${hive_path}/bin/hive" ] ; then
