@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${ANT_HOME}" ] ; then
-	ant_version="1.9.7"
+	ant_version="1.10.1"
 	ant_path="/opt/ant/${ant_version}"
 
 	if [ -x "${ant_path}/bin/ant" ] ; then
