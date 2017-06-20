@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${HADOOP_HOME}" ] ; then
-	hadoop_version="2.7.3"
+	hadoop_version="2.8.0"
 	hadoop_path="/opt/hadoop/${hadoop_version}"
 
 	if [ -x "${hadoop_path}/bin/hadoop" ] ; then
