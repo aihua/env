@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${HBASE_HOME}" ] ; then
-	hbase_version="1.2.2"
+	hbase_version="1.2.6"
 	hbase_path="/opt/hbase/${hbase_version}"
 
 	if [ -x "${hbase_path}/bin/hbase" ] ; then
