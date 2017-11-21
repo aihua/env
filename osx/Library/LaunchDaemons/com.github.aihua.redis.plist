@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.github.aihua.redis</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/redis/4.0.2/bin/redis-server</string>
+    <string>/opt/redis/4.0.2/conf/redis.conf</string>
+    <string>--daemonize yes</string>
+  </array>
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key>
+    <false/>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/usr/local/var/log/redis/6379.log</string>
+  <key>StandardErrorPath</key>
+  <string>/usr/local/var/log/redis/6379.log</string>
+</dict>
+</plist>
