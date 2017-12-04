@@ -34,7 +34,7 @@ server {
 	# Make site accessible from http://localhost/
 	client_max_body_size 50M;
 	client_body_buffer_size 128k;
-	client_body_temp_path	/var/nginx/client_body_temp;
+	client_body_temp_path	/var/lib/nginx/body;
 
 	location / {
 		# First attempt to serve request as file, then
@@ -79,19 +79,34 @@ server {
 	# deny access to .htaccess files, if Apache's document root
 	# concurs with nginx's one
 	#
-	#location ~ /\.ht {
-	#	deny all;
-	#}
+	location ~ /\.ht {
+		deny all;
+	}
+
+    location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
+        access_log        off;
+        log_not_found     off;
+        expires           30d;
+    }
+
+    # Prevent (deny) Access to Hidden Files
+    location ~ /\. {
+        access_log off;
+        log_not_found off;
+        deny all;
+    }
+
 	location /foo {
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header Host $server_name;
+		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-Proto http;
 		proxy_redirect off;
 		proxy_buffers           32 4k;
 		proxy_buffer_size          4k;
 		proxy_busy_buffers_size    64k;
 		proxy_temp_file_write_size 64k;
-		proxy_temp_path            /var/nginx/proxy_temp;
+		proxy_temp_path            /var/lib/nginx/proxy;
 
 		proxy_connect_timeout      70;
 		proxy_send_timeout         120;
