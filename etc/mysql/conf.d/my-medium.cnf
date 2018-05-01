@@ -19,7 +19,7 @@
 #password	= your_password
 port		= 3306
 socket		= /var/run/mysqld/mysqld.sock
-default-character-set = utf8
+default-character-set = utf8mb4
 
 # Here follows entries for some specific programs
 
@@ -34,7 +34,7 @@ datadir		= /data/repo/mysql
 tmpdir		= /tmp
 lc-messages-dir	= /usr/share/mysql
 skip-external-locking
-character-set-server = utf8
+character-set-server = utf8mb4
 #
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
