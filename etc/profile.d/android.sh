@@ -16,7 +16,7 @@ if [ -z "${ANDROID_HOME}" ] ; then
 fi
 
 if [ -z "${ANDROID_NDK_ROOT}" ] ; then
-	android_ndk_version="r16b"
+	android_ndk_version="r17"
 	android_ndk_path="/opt/android/ndk/${android_ndk_version}"
 
 	if [ -x "${android_ndk_path}/ndk-which" ] ; then
