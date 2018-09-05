@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${ERLANG_HOME}" ] ; then
-	erlang_version="21.0"
+	erlang_version="21.0.7"
 	erlang_path="/opt/erlang/${erlang_version}"
 
 	if [ -x "${erlang_path}/bin/erl" ] ; then

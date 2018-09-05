@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${JAVA_HOME}" ] ; then
-	jse_version="1.8.0_172"
+	jse_version="1.8.0_181"
 	jse_path="/opt/jse/${jse_version}"
 
 	if [ -x "${jse_path}/bin/java" ] ; then
