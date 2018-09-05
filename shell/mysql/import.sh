@@ -1,8 +1,9 @@
 #!/bin/sh
 
+host=""
 user=""
 password=""
 database=""
-source="xxx.sql"
+src="patch-20180808.sql"
 
-mysql --user="${user}" --password="${password}" "${database}"  < ${source} > ${database}.log 2>&1
+mysql --host="${host}" --user="${user}" --password="${password}" ${database} <  ${src} > out.log 2>&1
