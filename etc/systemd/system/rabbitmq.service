@@ -1,0 +1,38 @@
+[Unit]
+Description=RabbitMQ broker
+After=network.target epmd@127.0.0.1.socket
+Wants=network.target epmd@127.0.0.1.socket
+
+[Service]
+Type=notify
+User=rabbitmq
+Group=rabbitmq
+SyslogIdentifier=rabbitmq
+#EnvironmentFile=/etc/rabbitmq/rabbitmq-env.conf
+EnvironmentFile=/etc/default/rabbitmq
+UMask=0027
+NotifyAccess=all
+TimeoutStartSec=3600
+# Un-comment this setting if you need to increase RabbitMQ's
+# open files limit
+# LimitNOFILE=16384
+LimitNOFILE=65535
+#
+# Note:
+# You *may* wish to add the following to automatically restart RabbitMQ
+# in the event of a failure. systemd service restarts are not a
+# replacement for service monitoring. Please see
+# http://www.rabbitmq.com/monitoring.html
+#
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/data/repo/rabbitmq
+#ExecStart=/opt/rabbitmq/3.7.7/sbin/rabbitmq-server -detached
+ExecStart=/opt/rabbitmq/3.7.7/sbin/rabbitmq-server
+ExecStop=/opt/rabbitmq/3.7.7/sbin/rabbitmqctl stop
+ExecStop=/bin/sh -c "while ps -p $MAINPID >/dev/null 2>&1; do sleep 1; done"
+# rabbitmq/rabbitmq-server-release#51
+# SuccessExitStatus=69
+
+[Install]
+WantedBy=multi-user.target
