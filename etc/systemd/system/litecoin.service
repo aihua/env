@@ -1,0 +1,25 @@
+[Unit]
+Description=LiteCoin
+After=network.target
+
+[Service]
+Type=forking
+User=litecoin
+Group=litecoin
+ExecStart=/opt/litecoin/0.16.0/bin/litecoind -daemon -conf=/opt/litecoin/0.16.0/conf/litecoin.conf -pid=/var/run/litecoin/litecoin.pid -datadir=/data/repo/litecoin
+ExecStop=/opt/litecoin/0.16.0/bin/litecoind stop
+PIDFile=/var/run/litecoin/litecoin.pid
+Restart=on-failure
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=litecoin
+RuntimeDirectoryMode=755
+MemoryDenyWriteExecute=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

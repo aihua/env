@@ -1,0 +1,24 @@
+[Unit]
+Description=BitCoin
+After=network.target
+
+[Service]
+Type=forking
+User=bitcoin
+Group=bitcoin
+ExecStart=/opt/bitcoin/0.16.1/bin/bitcoind -daemon -conf=/opt/bitcoin/0.16.1/conf/bitcoin.conf -pid=/var/run/bitcoin/bitcoin.pid -datadir=/data/repo/bitcoin
+PIDFile=/var/run/bitcoin/bitcoin.pid
+Restart=on-failure
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=bitcoin
+RuntimeDirectoryMode=755
+MemoryDenyWriteExecute=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
