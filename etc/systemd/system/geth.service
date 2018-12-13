@@ -1,0 +1,24 @@
+[Unit]
+Description=Go Ethereum
+After=network.target
+
+[Service]
+Type=forking
+User=geth
+Group=geth
+ExecStart=/opt/geth/1.8.20/geth --config /data/repo/geth/conf/geth.conf
+PIDFile=/var/run/geth/geth.pid
+Restart=on-failure
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=geth
+RuntimeDirectoryMode=755
+MemoryDenyWriteExecute=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
