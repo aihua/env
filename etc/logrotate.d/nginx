@@ -1,0 +1,24 @@
+/var/log/nginx/*.log {
+    daily
+    missingok
+    copytruncate
+    rotate 180
+    maxage 180
+    maxsize 100M
+    dateext
+    dateformat -%Y%m%d
+    compress
+    delaycompress
+    olddir /data/backup/log/nginx/example.com
+    notifempty
+    create 0640 root adm
+    sharedscripts
+    prerotate
+        if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
+            run-parts /etc/logrotate.d/httpd-prerotate; \
+        fi \
+    endscript
+    postrotate
+        invoke-rc.d nginx rotate >/dev/null 2>&1
+    endscript
+}
