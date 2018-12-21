@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${M2_HOME}" ] ; then
-	maven_version="3.5.4"
+	maven_version="3.6.0"
 	maven_path="/opt/maven/${maven_version}"
 
 	if [ -x "${maven_path}/bin/mvn" ] ; then
