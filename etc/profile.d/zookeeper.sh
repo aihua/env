@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${ZOOKEEPER_HOME}" ] ; then
-	zookeeper_version="3.4.10"
+	zookeeper_version="3.4.13"
 	zookeeper_path="/opt/zookeeper/${zookeeper_version}"
 
 	if [ -x "${zookeeper_path}/bin/zkEnv.sh" ] ; then
