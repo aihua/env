@@ -113,6 +113,15 @@ server {
 		proxy_read_timeout         120;
 		proxy_pass http://tomcat_server;
 	}
+
+    location /websocket {
+        proxy_pass http://websocket;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $connection_upgrade;
+        # 这部分是利用http头透传真实客户端ip
+        proxy_set_header X-Real-IP $remote_addr;
+    }
 }
 
 
