@@ -5,18 +5,19 @@ After=network.target
 [Service]
 Type=simple
 User=rabbitmq
+Group=rabbitmq
+EnvironmentFile=/etc/default/rabbitmq
 SyslogIdentifier=rabbitmq
 LimitNOFILE=65536
-ExecStart=/usr/sbin/rabbitmq-server
-ExecStartPost=/usr/lib/rabbitmq/bin/rabbitmqctl wait /var/lib/rabbitmq/mnesia/rabbit@ubuntu.pid
-ExecStop=/usr/sbin/rabbitmqctl stop
+ExecStart=/opt/rabbitmq/3.7.14/sbin/rabbitmq-server
+ExecStartPost=/opt/rabbitmq/3.7.14/sbin/rabbitmq-server-wait
+ExecStop=/opt/rabbitmq/3.7.14/sbin/rabbitmqctl stop
 UMask=0027
 Restart=on-failure
 RestartSec=10
 RuntimeDirectory=rabbitmq
 RuntimeDirectoryMode=755
 ProtectSystem=full
-
 
 [Install]
 WantedBy=multi-user.target

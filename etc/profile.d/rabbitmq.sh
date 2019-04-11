@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${RABBITMQ_HOME}" ] ; then
-	rabbitmq_version="3.7.7"
+	rabbitmq_version="3.7.14"
 	rabbitmq_path="/opt/rabbitmq/${rabbitmq_version}"
 
 	if [ -x "${rabbitmq_path}/sbin/rabbitmq-server" ] ; then
