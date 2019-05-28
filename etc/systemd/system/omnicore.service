@@ -1,0 +1,26 @@
+[Unit]
+Description=OmniCore USDT
+After=network.target
+
+[Service]
+Type=forking
+User=omnicore
+Group=omnicore
+ExecStart=/opt/omnicore/0.5.0/bin/omnicored -daemon -conf=/opt/omnicore/0.5.0/conf/omnicore.conf -datadir=/data/repo/omnicore -pid=/var/run/omnicore/omnicore.pid 
+ExecStop=/opt/omnicore/0.5.0/bin/omnicore-cli -conf=/opt/omnicore/0.5.0/conf/omnicore.conf -datadir=/data/repo/omnicore -pid=/var/run/omnicore/omnicore.pid stop
+PIDFile=/var/run/omnicore/omnicore.pid
+SyslogIdentifier=omnicore
+Restart=on-failure
+CapabilityBoundingSet=
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+RuntimeDirectory=omnicore
+RuntimeDirectoryMode=755
+MemoryDenyWriteExecute=true
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
