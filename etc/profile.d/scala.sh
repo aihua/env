@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${SCALA_HOME}" ] ; then
-	scala_version="2.12.6"
+	scala_version="2.13.3"
 	scala_path="/opt/scala/${scala_version}"
 
 	if [ -x "${scala_path}/bin/scala" ] ; then

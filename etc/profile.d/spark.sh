@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${SPARK_HOME}" ] ; then
-	spark_version="2.4.0"
+	spark_version="3.0.0"
 	spark_path="/opt/spark/${spark_version}"
 
 	if [ -x "${spark_path}/bin/spark-shell" ] ; then

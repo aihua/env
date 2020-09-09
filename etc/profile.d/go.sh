@@ -1,13 +1,14 @@
 #!/bin/sh
 
 if [ -z "${GOPATH}" ] ; then
-	go_version="1.11.5"
+	go_version="1.15.1"
 	go_path="/opt/go/${go_version}"
 
 	if [ -x "${go_path}/bin/go" ] ; then
-		GOPATH=${go_path} ; export GOPATH
+        GOROOT=${go_path} ; export GOROOT
+		GOPATH=/data/repo/go ; export GOPATH
 		GOBIN=${go_path}/bin ; export GOBIN
-		PATH=${GOPATH}/bin:${PATH} ; export PATH
+		PATH=${GOROOT}/bin:${GOBIN}:${PATH} ; export PATH
 	fi
 	
 	unset go_path
