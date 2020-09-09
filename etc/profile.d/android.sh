@@ -7,7 +7,7 @@ if [ -z "${ANDROID_HOME}" ] ; then
 	if [ -x "${android_sdk_path}/tools/android" ] ; then
 		ANDROID_HOME=${android_sdk_path} ; export ANDROID_HOME
         ANDROID_SDK_ROOT=${ANDROID_HOME} ; export ANDROID_SDK_ROOT
-		PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/tools/proguard/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/build-tools/27.0.3:${PATH} ; export PATH
+		PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/tools/proguard/bin:${ANDROID_HOME}/emulator:${ANDROID_HOME}/emulator/bin64:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/build-tools/28.0.3:${PATH} ; export PATH
         ANDROID_EMULATOR_HOME=/data/repo/android ; export ANDROID_EMULATOR_HOME
 	fi
 	
@@ -16,7 +16,7 @@ if [ -z "${ANDROID_HOME}" ] ; then
 fi
 
 if [ -z "${ANDROID_NDK_ROOT}" ] ; then
-	android_ndk_version="r17"
+	android_ndk_version="r19"
 	android_ndk_path="/opt/android/ndk/${android_ndk_version}"
 
 	if [ -x "${android_ndk_path}/ndk-which" ] ; then
