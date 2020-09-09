@@ -112,9 +112,9 @@ let g:prettier#config#trailing_comma = 'es5'
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
 "---------------------------------prettier/vim-prettier-----------------------
 "
-"---------------------------------neocomplete---------------------------------
+"---------------------------------deoplete.nvim---------------------------------
 let g:deoplete#enable_at_startup = 1
-"---------------------------------neocomplete---------------------------------
+"---------------------------------deoplete.nvim---------------------------------
 
 "---------------------------------neosnippet----------------------------------
 " Plugin key-mappings.
