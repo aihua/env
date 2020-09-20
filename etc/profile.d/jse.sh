@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [ -z "${JAVA_HOME}" ] ; then
-	jse_version="1.8.0_202"
-	jse_path=`/usr/libexec/java_home -v $jse_version`
+	jse_version="1.8.0_261"
+	jse_path="/opt/jse/${jse_version}"
 
 	if [ -x "${jse_path}/bin/java" ] ; then
 		JAVA_HOME=${jse_path} ; export JAVA_HOME
