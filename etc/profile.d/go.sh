@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${GOPATH}" ] ; then
-	go_version="1.15.1"
+	go_version="1.17.2"
 	go_path="/opt/go/${go_version}"
 
 	if [ -x "${go_path}/bin/go" ] ; then
