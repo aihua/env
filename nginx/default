@@ -23,8 +23,9 @@ server {
 
 	server_name xxx.com;
 
-	#Uncomment the following line for all HTTP --> HTTPS
+	#Uncomment one of the following line for all HTTP --> HTTPS
 	#return 301 https://$server_name$request_uri;
+    #rewrite ^(.*)$  https://xxx.com$1 permanent;
 
 	#root /usr/share/nginx/html;
 	#index index.html index.htm;
@@ -50,6 +51,7 @@ server {
 	#}
 
 	error_page 404 /404.html;
+    error_page 502 /502.html;
 
 	# redirect server error pages to the static page /50x.html
 	#
@@ -79,11 +81,52 @@ server {
 	# deny access to .htaccess files, if Apache's document root
 	# concurs with nginx's one
 	#
+	location / {
+		if (!-e $request_filename){
+		    rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+		}
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+	# pass PHP scripts to FastCGI server
+	#
+	location ~ [^/]\.php(/|$) {
+		include snippets/fastcgi-php.conf;
+		include snippets/pathinfo.conf;
+	#
+	#	# With php-fpm (or other unix sockets):
+        if ($uri !~ "^/uploads/") {
+            fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+        }
+	#	# With php-cgi (or other tcp sockets):
+	#	fastcgi_pass 127.0.0.1:9000;
+	}
+
+    location ~* ^/uploads/.*\.(php|php5)$ {
+        deny all;
+        return 503;
+    }
+
+	# deny access to .htaccess files, if Apache's document root
+	# concurs with nginx's one
+	#
+    location ~ ^/(\.user.ini|\.htaccess|\.git|\.svn|\.project|LICENSE|README.md) {
+        return 404;
+    }
+
 	location ~ /\.ht {
 		deny all;
 	}
 
-    location ~* \.(jpg|jpeg|gif|png|css|js|ico|xml)$ {
+    location ~ .*\.(js|css)?$ {
+        expires      12h;
+        error_log off;
+        access_log off;
+    }
+
+    location ~* \.(jpg|jpeg|gif|png|ico|swf|mp3|mp4)$ {
         access_log        off;
         log_not_found     off;
         expires           30d;
