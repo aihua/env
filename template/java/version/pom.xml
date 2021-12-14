@@ -324,7 +324,7 @@
   	<version.servlet>3.1.0</version.servlet>
   	<version.jsp>2.3.1</version.jsp>
   	<version.jstl>1.2</version.jstl>
-  	<version.log4j>2.5</version.log4j>
+  	<version.log4j>2.16.0</version.log4j>
   	<version.quartz>2.3.2</version.quartz>
   	<version.ehcache>2.9.1</version.ehcache>
   	<version.mysql>8.0.21</version.mysql>
