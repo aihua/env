@@ -315,7 +315,7 @@
   <properties>
   	<version.spring>4.2.3.RELEASE</version.spring>
   	<version.junit>4.12</version.junit>
-  	<version.hibernate>5.0.5.Final</version.hibernate>
+  	<version.hibernate>5.4.24.Final</version.hibernate>
   	<version.ibatis>3.3.0</version.ibatis>
   	<version.ibatis.cache>1.0.1</version.ibatis.cache>
   	<version.ibatis.generator>1.3.2</version.ibatis.generator>
