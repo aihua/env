@@ -327,7 +327,7 @@
   	<version.log4j>2.5</version.log4j>
   	<version.quartz>2.3.2</version.quartz>
   	<version.ehcache>2.9.1</version.ehcache>
-  	<version.mysql>8.0.21</version.mysql>
+  	<version.mysql>8.0.28</version.mysql>
   	<version.postgresql>9.1-901-1.jdbc4</version.postgresql>
   	<version.struts>2.5.20</version.struts>
   	<version.tiles>3.0.5</version.tiles>
