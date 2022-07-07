@@ -313,7 +313,7 @@
     </dependency>
   </dependencies>
   <properties>
-  	<version.spring>4.2.3.RELEASE</version.spring>
+  	<version.spring>5.2.21.RELEASE</version.spring>
   	<version.junit>4.12</version.junit>
   	<version.hibernate>5.0.5.Final</version.hibernate>
   	<version.ibatis>3.3.0</version.ibatis>
