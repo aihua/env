@@ -1,0 +1,28 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "java.autobuild.enabled": false,
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-1.8",
+          "sources": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip",
+          "path": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+        },
+        {
+          "name": "JavaSE-11",
+          "path": "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home",
+          "sources" : "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/lib/src.zip",
+          "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api",
+          "default":  true
+         },
+         {
+          "name": "JavaSE-17",
+          "sources": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip",
+          "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+         }
+      ],
+      "maven.executable.preferMavenWrapper": false,
+      "maven.settingsFile": "/opt/maven/3.9.5/conf/settings.xml",
+      "telemetry.telemetryLevel": "off",
+      "workbench.enableExperiments": "false"
+}
