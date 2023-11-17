@@ -1,27 +1,25 @@
 #!/bin/sh
 
 # `spring init --list` for details of dependencies
-# activemq actuator amqp artemis 
-# azure-active-directory azure-cosmos-db azure-keyvault azure-storage azure-support 
-# batch cache camel 
-# cloud-bus cloud-cloudfoundry-discovery cloud-config-client cloud-config-server 
-# cloud-contract-stub-runner cloud-contract-verifier cloud-eureka cloud-eureka-server 
-# cloud-feign cloud-function cloud-gateway cloud-gcp cloud-gcp-pubsub cloud-gcp-storage 
-# cloud-loadbalancer cloud-resilience4j cloud-starter cloud-starter-consul-config 
-# cloud-starter-consul-discovery cloud-starter-sleuth cloud-starter-vault-config cloud-starter-zipkin 
-# cloud-starter-zookeeper-config cloud-starter-zookeeper-discovery cloud-stream cloud-task 
-# codecentric-spring-boot-admin-client codecentric-spring-boot-admin-server configuration-processor 
-# data-cassandra data-cassandra-reactive data-couchbase data-couchbase-reactive data-elasticsearch data-jdbc data-jpa 
-# data-ldap data-mongodb data-mongodb-reactive data-neo4j data-r2dbc data-redis data-redis-reactive data-rest data-rest-explorer 
-# datadog db2 derby devtools flapdoodle-mongo flyway freemarker geode graphite graphql groovy-templates 
-# h2 hateoas hsql influx integration jdbc jersey jooq kafka kafka-streams liquibase lombok 
-# mail mariadb mustache mybatis mysql native new-relic oauth2-client oauth2-resource-server okta open-service-broker oracle 
-# picocli postgresql prometheus quartz restdocs rsocket scs-config-client scs-service-registry security session solace 
-# spring-shell sqlserver testcontainers thymeleaf unboundid-ldap vaadin validation wavefront web web-services webflux websocket 
+# activemq actuator amqp artemis azure-active-directory azure-cosmos-db azure-keyvault azure-storage azure-support
+# batch cache camel cloud-bus cloud-cloudfoundry-discovery cloud-config-client cloud-config-server cloud-contract-stub-runner
+# cloud-contract-verifier cloud-eureka cloud-eureka-server cloud-feign cloud-function cloud-gateway cloud-gcp
+# cloud-gcp-pubsub cloud-gcp-storage cloud-loadbalancer cloud-resilience4j cloud-starter cloud-starter-consul-config
+# cloud-starter-consul-discovery cloud-starter-vault-config cloud-starter-zookeeper-config cloud-starter-zookeeper-discovery
+# cloud-stream cloud-task codecentric-spring-boot-admin-client codecentric-spring-boot-admin-server configuration-processor
+# data-cassandra data-cassandra-reactive data-couchbase data-couchbase-reactive data-elasticsearch data-jdbc data-jpa
+# data-ldap data-mongodb data-mongodb-reactive data-neo4j data-r2dbc data-redis data-redis-reactive data-rest data-rest-explorer
+# datadog db2 derby devtools distributed-tracing docker-compose dynatrace flapdoodle-mongo flyway freemarker
+# graphite graphql groovy-templates h2 hateoas hilla hsql influx integration jdbc jersey jooq kafka kafka-streams
+# liquibase lombok mail mariadb modulith mustache mybatis mysql native new-relic oauth2-authorization-server oauth2-client
+# oauth2-resource-server okta oracle picocli postgresql prometheus pulsar pulsar-reactive quartz restdocs rsocket
+# scs-config-client scs-service-registry security sentry session solace spring-shell sqlserver testcontainers thymeleaf
+# timefold-solver unboundid-ldap vaadin validation wavefront web web-services webflux websocket zipkin
+
 dependencies="web,cloud-feign"
 
-java_version="11"
-boot_version="2.7.2"
+java_version="17"
+boot_version="3.1.5"
 
 # programming language 
 # java or kotlin or groovy
