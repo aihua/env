@@ -8,6 +8,7 @@ database="demo"
 tables=""
 dist="xxx-`date +%y%m%d%H%M%S`.sql"
 
+# MySQL 8.x
 mysqldump --host="${host}" --port="${port}"  --user="${user}" --password="${password}" --set-gtid-purged=OFF --add-drop-table --add-drop-trigger --single-transaction -ER ${database} ${tables} > ${dist}
 
 # MySQL 5.x
