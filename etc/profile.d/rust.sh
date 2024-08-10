@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "${RUST_HOME}" ] ; then
-	rust_version="1.46.0"
+	rust_version="1.78.0"
 	rust_path="/opt/rust/${rust_version}"
     rust_toolchain_path="${rust_path}/toolchains/stable-x86_64-apple-darwin"
 
