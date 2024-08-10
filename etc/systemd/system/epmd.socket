@@ -1,9 +1,10 @@
 [Unit]
-Conflicts=epmd.service
+Description=Erlang Port Mapper Daemon Activation Socket
 
 [Socket]
 ListenStream=4369
-Accept=no
+BindIPv6Only=both
+Accept=false
 
 [Install]
 WantedBy=sockets.target

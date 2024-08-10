@@ -1,5 +1,6 @@
-ERLANG_HOME=/opt/erlang/21.3
-ERL_EPMD_ADDRESS=192.168.10.252
-JAVA_HOME=/opt/jse/1.8.0_202
-RABBITMQ_HOME=/opt/rabbitmq/3.7.14
-PATH=/opt/rabbitmq/3.7.14/sbin:/opt/jse/1.8.0_202/bin:/opt/erlang/21.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+ERLANG_HOME=/opt/erlang/otp/26.2.4
+ERL_EPMD_ADDRESS=192.168.10.200
+ERL_EPMD_PORT=4369
+JAVA_HOME=/opt/jse/17.0.10+7
+RABBITMQ_HOME=/opt/rabbitmq/3.13.1
+PATH=/opt/rabbitmq/3.13.1/sbin:/opt/jse/17.0.10+7/bin:/opt/erlang/otp/26.2.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin

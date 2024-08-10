@@ -1,11 +1,17 @@
 [Unit]
 Description=Erlang Port Mapper Daemon
+After=network.target
+Requires=epmd.socket
 
 [Service]
 EnvironmentFile=/etc/default/epmd
-ExecStart=/opt/erlang/21.1.4/bin/epmd -daemon $EPMD_OPTS
-ExecStop=/opt/erlang/21.1.4/bin/epmd -kill
-Type=forking
+ExecStart=/opt/erlang/otp/26.2.4/bin/epmd -systemd
+Type=simple
+StandardOutput=journal
+StandardError=journal
+User=epmd
+Group=epmd
 
 [Install]
+Also=epmd.socket
 WantedBy=multi-user.target

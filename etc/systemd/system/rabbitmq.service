@@ -1,23 +1,25 @@
 [Unit]
 Description=RabbitMQ Messaging Server
-After=network.target
+After=network.target epmd.socket
+Wants=network.target epmd.socket
 
 [Service]
-Type=simple
+Type=notify
 User=rabbitmq
 Group=rabbitmq
-EnvironmentFile=/etc/default/rabbitmq
-SyslogIdentifier=rabbitmq
-LimitNOFILE=65536
-ExecStart=/opt/rabbitmq/3.7.14/sbin/rabbitmq-server
-ExecStartPost=/opt/rabbitmq/3.7.14/sbin/rabbitmq-server-wait
-ExecStop=/opt/rabbitmq/3.7.14/sbin/rabbitmqctl stop
 UMask=0027
+EnvironmentFile=/etc/default/rabbitmq
+NotifyAccess=all
+TimeoutStartSec=600
+LimitNOFILE=65536
+SyslogIdentifier=rabbitmq
 Restart=on-failure
 RestartSec=10
-RuntimeDirectory=rabbitmq
-RuntimeDirectoryMode=755
-ProtectSystem=full
+WorkingDirectory=/data/repo/rabbitmq
+ExecStart=/opt/rabbitmq/3.13.1/sbin/rabbitmq-server
+ExecStop=/opt/rabbitmq/3.13.1/sbin/rabbitmqctl stop
+StandardOutput=append:/var/log/rabbitmq/rabbitmq-server.log
+StandardError=append:/var/log/rabbitmq/rabbitmq-server.error.log
 
 [Install]
 WantedBy=multi-user.target
