@@ -1,0 +1,14 @@
+name: anythingllm
+services:
+    anythingllm:
+        ports:
+            - 3001:3001
+        cap_add:
+            - SYS_ADMIN
+        user: root
+        volumes:
+            - ${STORAGE_LOCATION}:/app/server/storage
+#            - ${STORAGE_LOCATION}/.env:/app/server/.env
+        environment:
+            - STORAGE_DIR=/app/server/storage
+        image: mintplexlabs/anythingllm

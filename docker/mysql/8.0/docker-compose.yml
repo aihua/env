@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-8.0
+    restart: always
+    environment:
+      TZ: "Asia/Shanghai"
+      MYSQL_ROOT_PASSWORD: ""
+    volumes:
+      - "/data/docker/mysql/conf.d:/etc/mysql/conf.d"
+      - "/data/repo/docker-mysql:/var/lib/mysql"
+      - "/var/log/docker/mysql:/var/log/mysql"
+    ports:
+      - "3306:3306"
