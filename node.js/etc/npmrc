@@ -1,5 +1,5 @@
-cache=/data/repo/node.js/cache
-prefix=/data/repo/node.js/global
-registry=https://registry.npmmirror.com
-state-dir=/data/repo/node.js/pnpm/state
-cache-dir=/data/repo/node.js/pnpm/cache
+cache=/System/Volumes/Data/data/repo/node.js/cache
+prefix=/System/Volumes/Data/data/repo/node.js/global
+registry=http://registry.npmmirror.com
+state-dir=/System/Volumes/Data/data/repo/node.js/pnpm/state
+cache-dir=/System/Volumes/Data/data/repo/node.js/pnpm/cache
