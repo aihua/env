@@ -1,0 +1,14 @@
+# Write your default config options here!
+# See 'OSD/SUBTITLE OPTIONS' from `man mplayer`
+ass=1
+
+# Sets the border (outline) color for text subtitles. The color format is RRGGBBAA, which is in 32-bit HEX.
+# The last 'AA'  value is transparence value, 'FF' is full transparency (no alpha) and '00' is no trancparency (full alpha).
+ass-border-color=000000FF
+ass-color=FFFF0000
+
+# See `fc-list :lang=zh`
+font='PingFang SC:style=Light'
+utf8=1
+
+
