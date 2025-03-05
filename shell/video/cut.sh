@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Embed srt subtitle with Yellow font without outline.
+# ffmpeg -i in.mp4 -vf "subtitles=in.srt:force_style='Fontname=PingFang SC Light,Outline=0,PrimaryColour=&H0000FFFF'" out.mp4
+
 # cut video from $start to the last $end seconds.
 
 start="8"
