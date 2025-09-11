@@ -42,37 +42,56 @@
         "list": 
         [
             {
+                "name": "Windows PowerShell",
                 "colorScheme": "Homebrew",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}"
+            },
+            {
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26",
+                "colorScheme": "Homebrew",
+                "hidden": false,
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}"
             },
             {
                 "colorScheme": "Homebrew",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
-            },
-            {
-                "colorScheme": "Homebrew",
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
                 "name": "Azure Cloud Shell",
+                "hidden": false,
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "source": "Windows.Terminal.Azure"
             },
-            // {
-                // "colorScheme": "Homebrew",
-                // "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                // "hidden": false,
-                // "name": "Ubuntu",
-                // "source": "Windows.Terminal.Wsl"
-            // },
             {
                 "colorScheme": "Homebrew",
-                "commandline": "C:\\opt\\git\\2.38.1\\bin\\bash.exe -i -l",
-                "guid": "{9f0de849-0258-428c-8711-00ab6d9b2933}",
-                "icon": "C:\\opt\\git\\2.38.1\\mingw64\\share\\git\\git-for-windows.ico",
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "name": "UCRT64 / MSYS2",
+                "colorScheme": "Homebrew",
+                "hidden": false,
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "commandline": "D:/opt/mingw/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
+                "startingDirectory": "D:/opt/mingw/msys64/home/%USERNAME%",
+                "icon": "D:/opt/mingw/msys64/ucrt64.ico"
+            },
+            {
+                "name": "MSYS / MSYS2",
+                "colorScheme": "Homebrew",
+                "hidden": false,
+                "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+                "commandline": "D:/opt/mingw/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+                "startingDirectory": "D:/opt/mingw/msys64/home/%USERNAME%",
+                "icon": "D:/opt/mingw/msys64/msys2.ico"
+            },
+            {
                 "name": "Git Bash",
+                "colorScheme": "Homebrew",
+                "hidden": false,
+                "guid": "{9f0de849-0258-428c-8711-00ab6d9b2933}",
+                "commandline": "D:/opt/git/2.38.1/bin/bash.exe -i -l",
+                "icon": "D:/opt/git/2.38.1/mingw64/share/git/git-for-windows.ico",
                 "startingDirectory": "%USERPROFILE%"
             }
         ]
@@ -80,6 +99,7 @@
     "schemes": 
     [
         {
+            "name": "Campbell",
             "background": "#0C0C0C",
             "black": "#0C0C0C",
             "blue": "#0037DA",
@@ -95,7 +115,6 @@
             "cyan": "#3A96DD",
             "foreground": "#CCCCCC",
             "green": "#13A10E",
-            "name": "Campbell",
             "purple": "#881798",
             "red": "#C50F1F",
             "selectionBackground": "#FFFFFF",
@@ -103,6 +122,7 @@
             "yellow": "#C19C00"
         },
         {
+            "name": "Campbell Powershell",
             "background": "#012456",
             "black": "#0C0C0C",
             "blue": "#0037DA",
@@ -118,7 +138,6 @@
             "cyan": "#3A96DD",
             "foreground": "#CCCCCC",
             "green": "#13A10E",
-            "name": "Campbell Powershell",
             "purple": "#881798",
             "red": "#C50F1F",
             "selectionBackground": "#FFFFFF",
@@ -126,6 +145,7 @@
             "yellow": "#C19C00"
         },
         {
+            "name": "Homebrew",
             "background": "#000000",
             "black": "#000000",
             "blue": "#0000B2",
@@ -141,7 +161,6 @@
             "cyan": "#00A6B2",
             "foreground": "#00FF00",
             "green": "#00A600",
-            "name": "Homebrew",
             "purple": "#B200B2",
             "red": "#990000",
             "selectionBackground": "#083905",
@@ -149,6 +168,7 @@
             "yellow": "#999900"
         },
         {
+            "name": "One Half Dark",
             "background": "#282C34",
             "black": "#282C34",
             "blue": "#61AFEF",
@@ -164,7 +184,6 @@
             "cyan": "#56B6C2",
             "foreground": "#DCDFE4",
             "green": "#98C379",
-            "name": "One Half Dark",
             "purple": "#C678DD",
             "red": "#E06C75",
             "selectionBackground": "#FFFFFF",
@@ -172,6 +191,7 @@
             "yellow": "#E5C07B"
         },
         {
+            "name": "One Half Light",
             "background": "#FAFAFA",
             "black": "#383A42",
             "blue": "#0184BC",
@@ -187,7 +207,6 @@
             "cyan": "#0997B3",
             "foreground": "#383A42",
             "green": "#50A14F",
-            "name": "One Half Light",
             "purple": "#A626A4",
             "red": "#E45649",
             "selectionBackground": "#FFFFFF",
@@ -195,6 +214,7 @@
             "yellow": "#C18301"
         },
         {
+            "name": "Solarized Dark",
             "background": "#002B36",
             "black": "#002B36",
             "blue": "#268BD2",
@@ -210,7 +230,6 @@
             "cyan": "#2AA198",
             "foreground": "#839496",
             "green": "#859900",
-            "name": "Solarized Dark",
             "purple": "#D33682",
             "red": "#DC322F",
             "selectionBackground": "#FFFFFF",
@@ -218,6 +237,7 @@
             "yellow": "#B58900"
         },
         {
+            "name": "Solarized Light",
             "background": "#FDF6E3",
             "black": "#002B36",
             "blue": "#268BD2",
@@ -233,7 +253,6 @@
             "cyan": "#2AA198",
             "foreground": "#657B83",
             "green": "#859900",
-            "name": "Solarized Light",
             "purple": "#D33682",
             "red": "#DC322F",
             "selectionBackground": "#FFFFFF",
@@ -241,6 +260,7 @@
             "yellow": "#B58900"
         },
         {
+            "name": "Tango Dark",
             "background": "#000000",
             "black": "#000000",
             "blue": "#3465A4",
@@ -256,7 +276,6 @@
             "cyan": "#06989A",
             "foreground": "#D3D7CF",
             "green": "#4E9A06",
-            "name": "Tango Dark",
             "purple": "#75507B",
             "red": "#CC0000",
             "selectionBackground": "#FFFFFF",
@@ -264,6 +283,7 @@
             "yellow": "#C4A000"
         },
         {
+            "name": "Tango Light",
             "background": "#FFFFFF",
             "black": "#000000",
             "blue": "#3465A4",
@@ -279,7 +299,6 @@
             "cyan": "#06989A",
             "foreground": "#555753",
             "green": "#4E9A06",
-            "name": "Tango Light",
             "purple": "#75507B",
             "red": "#CC0000",
             "selectionBackground": "#FFFFFF",
@@ -287,6 +306,7 @@
             "yellow": "#C4A000"
         },
         {
+            "name": "Vintage",
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -302,7 +322,6 @@
             "cyan": "#008080",
             "foreground": "#C0C0C0",
             "green": "#008000",
-            "name": "Vintage",
             "purple": "#800080",
             "red": "#800000",
             "selectionBackground": "#FFFFFF",
