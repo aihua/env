@@ -2,33 +2,38 @@
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "One Dark Pro Darker",
     "java.autobuild.enabled": false,
+    "java.configuration.detectJdksAtStart": false,
     "java.configuration.runtimes": [
         {
           "name": "JavaSE-1.8",
-          // "sources": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip",
-          // "path": "/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+          "path": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home",
           "sources": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/src.zip",
-          "javadoc" : "http://localhost/jse/1.8.x/api",
-          "path": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
+          "javadoc" : "http://localhost/jse/1.8.x/api"
         },
         {
           "name": "JavaSE-11",
           "path": "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home",
           "sources" : "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/lib/src.zip",
-          "javadoc" : "http://localhost/jse/11.x/api",
-          "default":  true
+          "javadoc" : "http://localhost/jse/11.x/api"
          },
          {
           "name": "JavaSE-17",
+          "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
           "sources": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip",
-          "javadoc" : "http://localhost/jse/17.x/api",
-          "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+          "javadoc" : "http://localhost/jse/17.x/api"
+         },
+         {
+          "name": "JavaSE-21",
+          "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
+          "sources": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib/src.zip",
+          "javadoc" : "http://localhost/jse/21.x/api",
+          "default":  true
          }
       ],
-      "java.configuration.maven.globalSettings": "/opt/maven/3.9.5/conf/settings.xml",
-      "java.configuration.maven.userSettings": "/opt/maven/3.9.5/conf/settings.xml",
+      "java.configuration.maven.globalSettings": "/opt/maven/3.9.11/conf/settings.xml",
+      "java.configuration.maven.userSettings": "/opt/maven/3.9.11/conf/settings.xml",
+      "maven.settingsFile": "/opt/maven/3.9.11/conf/settings.xml",
       "maven.executable.preferMavenWrapper": false,
-      "maven.settingsFile": "/opt/maven/3.9.5/conf/settings.xml",
       "telemetry.telemetryLevel": "off",
       "workbench.enableExperiments": "false"
 }

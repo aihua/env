@@ -1,41 +1,39 @@
 {
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "One Dark Pro Darker",
+    "java.autobuild.enabled": false,
+    "java.configuration.detectJdksAtStart": false,
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-1.8",
-            "path": "C:\\jse\\1.8.0_202",
-            "sources" : "C:\\jse\\1.8.0_202\\src.zip",
+            "path": "D:\\opt\\jse\\8u462",
+            "sources" : "D:\\opt\\jse\\8u462\\src.zip",
             "javadoc": "https://docs.oracle.com/javase/8/docs/api"
         },
         {
             "name": "JavaSE-11",
-            "path": "C:\\jse\\11.0.16",
-            "sources" : "C:\\jse\\11.0.16\\lib\\src.zip",
-            "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api",
+            "path": "D:\\opt\\jse\\11.0.28",
+            "sources" : "D:\\opt\\jse\\11.0.28\\lib\\src.zip",
+            "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api"
         },
         {
             "name": "JavaSE-17",
-            "path": "C:\\jse\\17.0.1",
-            "sources" : "C:\\jse\\17.0.1\\lib\\src.zip",
-            "javadoc": "https://docs.oracle.com/en/java/javase/17/docs/api",
+            "path": "D:\\opt\\jse\\17.0.16",
+            "sources" : "D:\\opt\\jse\\17.0.16\\lib\\src.zip",
+            "javadoc": "https://docs.oracle.com/en/java/javase/17/docs/api"
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "D:\\opt\\jse\\21.0.8",
+            "sources" : "D:\\opt\\jse\\21.0.8\\lib\\src.zip",
+            "javadoc": "https://docs.oracle.com/en/java/javase/21/docs/api",
             "default":  true
         }
     ],
-    "java.configuration.maven.userSettings": "C:\\maven\\3.8.4\\conf\\settings.xml",
-    "java.configuration.maven.globalSettings": "C:\\maven\\3.8.4\\conf\\settings.xml",
+    "java.configuration.maven.userSettings": "D:\\opt\\maven\\3.9.11\\conf\\settings.xml",
+    "java.configuration.maven.globalSettings": "D:\\opt\\maven\\3.9.11\\conf\\settings.xml",
+    "maven.settingsFile": "D:\\opt\\maven\\3.9.11\\conf\\settings.xml",
     "maven.executable.preferMavenWrapper": false,
-    "java.autobuild.enabled": false,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\vagrant\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
-    "redhat.telemetry.enabled": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "xml.java.home": "",
-    "java.showBuildStatusOnStart.enabled": "notification"
+    "telemetry.telemetryLevel": "off",
+    "workbench.enableExperiments": "false"
 }

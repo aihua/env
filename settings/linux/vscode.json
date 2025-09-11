@@ -1,0 +1,39 @@
+{
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "java.autobuild.enabled": false,
+    "java.configuration.detectJdksAtStart": false,
+    "java.configuration.runtimes": [
+         {
+          "name": "JavaSE-1.8",
+          "path": "/opt/jse/8u462-b08",
+          "sources": "/opt/jse/8u462-b08/src.zip",
+          "javadoc" : "https://docs.oracle.com/javase/8/docs/api/"
+         },
+         {
+          "name": "JavaSE-11",
+          "path": "/opt/jse/11.0.28+6",
+          "sources": "/opt/jse/11.0.28+6/lib/src.zip",
+          "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api/"
+         },
+         {
+          "name": "JavaSE-17",
+          "path": "/opt/jse/17.0.16+8",
+          "sources": "/opt/jse/17.0.16+8/lib/src.zip",
+          "javadoc" : "https://docs.oracle.com/en/java/javase/17/docs/api/"
+         },
+         {
+          "name": "JavaSE-21",
+          "path": "/opt/jse/21.0.8+9",
+          "sources": "/opt/jse/21.0.8+9/lib/src.zip",
+          "javadoc" : "https://docs.oracle.com/en/java/javase/21/docs/api/",
+          "default": true
+         }
+    ],
+    "java.configuration.maven.globalSettings": "/opt/maven/3.9.11/conf/settings.xml",
+    "java.configuration.maven.userSettings": "/opt/maven/3.9.11/conf/settings.xml",
+    "maven.settingsFile": "/opt/maven/3.9.11/conf/settings.xml",
+    "maven.executable.preferMavenWrapper": false,
+    "telemetry.telemetryLevel": "off",
+    "workbench.enableExperiments": "false"
+}
