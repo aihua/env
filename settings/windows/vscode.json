@@ -1,6 +1,9 @@
 {
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.enableExperiments": "false",
+    "editor.fontSize": 14,
+    "editor.rulers": [ 120 ],
     "java.autobuild.enabled": false,
     "java.configuration.detectJdksAtStart": false,
     "java.configuration.runtimes": [
@@ -34,6 +37,7 @@
     "java.configuration.maven.globalSettings": "D:\\opt\\maven\\3.9.11\\conf\\settings.xml",
     "maven.settingsFile": "D:\\opt\\maven\\3.9.11\\conf\\settings.xml",
     "maven.executable.preferMavenWrapper": false,
-    "telemetry.telemetryLevel": "off",
-    "workbench.enableExperiments": "false"
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex.formatter.columnLimit": 0,
+    "telemetry.telemetryLevel": "off"
 }

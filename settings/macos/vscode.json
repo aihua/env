@@ -1,6 +1,9 @@
 {
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.enableExperiments": "false",
+    "editor.fontSize": 14,
+    "editor.rulers": [ 120 ],
     "java.autobuild.enabled": false,
     "java.configuration.detectJdksAtStart": false,
     "java.configuration.runtimes": [
@@ -8,25 +11,25 @@
           "name": "JavaSE-1.8",
           "path": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home",
           "sources": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/src.zip",
-          "javadoc" : "http://localhost/jse/1.8.x/api"
+          "javadoc" : "http://localhost/jse/8/api"
         },
         {
           "name": "JavaSE-11",
           "path": "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home",
           "sources" : "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/lib/src.zip",
-          "javadoc" : "http://localhost/jse/11.x/api"
+          "javadoc" : "http://localhost/jse/11/api"
          },
          {
           "name": "JavaSE-17",
           "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
           "sources": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/lib/src.zip",
-          "javadoc" : "http://localhost/jse/17.x/api"
+          "javadoc" : "http://localhost/jse/17/api"
          },
          {
           "name": "JavaSE-21",
           "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
           "sources": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib/src.zip",
-          "javadoc" : "http://localhost/jse/21.x/api",
+          "javadoc" : "http://localhost/jse/21/api",
           "default":  true
          }
       ],
@@ -34,6 +37,7 @@
       "java.configuration.maven.userSettings": "/opt/maven/3.9.11/conf/settings.xml",
       "maven.settingsFile": "/opt/maven/3.9.11/conf/settings.xml",
       "maven.executable.preferMavenWrapper": false,
-      "telemetry.telemetryLevel": "off",
-      "workbench.enableExperiments": "false"
+      "latex-workshop.latex.autoBuild.run": "never",
+      "latex.formatter.columnLimit": 0,
+      "telemetry.telemetryLevel": "off"
 }
